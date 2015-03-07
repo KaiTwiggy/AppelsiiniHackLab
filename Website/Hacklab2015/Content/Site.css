@@ -11,12 +11,14 @@
 }
 .perspect{
 	perspective: 800px;
-	display: inline-block;
+
 }
 .custom-btn:focus{
 	outline: none;
 }
 .custom-btn {
+	text-align: center;
+	display: block;
 	background: #5cbcf6;
 	border: none;
 	font-family: inherit;
@@ -24,8 +26,7 @@
 	color: inherit;
 	cursor: pointer;
 	padding: 25px 80px;
-	display: inline-block;
-	margin: 15px 0;
+	margin: 15px 30px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: 700;
@@ -38,6 +39,10 @@
 	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
 	transform-style: preserve-3d;
+}
+.custom-btn:hover,.custom-btn:active,.custom-btn:focus,.custom-btn:visited{
+	color: white;
+	text-decoration: none;
 }
 
 .btn-submitting{
