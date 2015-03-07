@@ -1,3 +1,143 @@
-﻿body {
-	
+﻿body{
+	font-family: 'Lato', sans-serif;
+}
+
+#form-actions{
+	max-width: 600px;
+	margin:50px auto 20px;
+}
+.btn, .form-control{
+	border-radius: 0;
+}
+.perspect{
+	perspective: 800px;
+	display: inline-block;
+}
+.custom-btn:focus{
+	outline: none;
+}
+.custom-btn {
+	background: #5cbcf6;
+	border: none;
+	font-family: inherit;
+	font-size: 30px;
+	color: inherit;
+	cursor: pointer;
+	padding: 25px 80px;
+	display: inline-block;
+	margin: 15px 0;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	color:white;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.btn-submitting{
+	-webkit-animation: submit-animation 2s infinite;
+	-o-animation: submit-animation 2s infinite;
+	animation: submit-animation 2s infinite;
+	 -webkit-animation-direction: alternate;
+	 -o-animation-direction: alternate;
+	 animation-direction: alternate;
+}
+@-webkit-keyframes submit-animation {
+	0% {
+		background: #5cbcf6;
+	}
+	100% { 
+		background: #767A99;
+	}
+}
+
+@-moz-keyframes submit-animation {
+	0% {
+		background: #5cbcf6;
+	}
+	100% { 
+		background: #767A99;
+	}
+}
+
+@keyframes submit-animation {
+	0% {
+		background: #5cbcf6;
+	}
+	100% { 
+		background: #767A99;	}
+}
+
+
+
+.custom-btn:after,
+.custom-btn:before {
+	text-transform: uppercase;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	line-height: 92px;
+}
+
+.custom-btn:after {
+	top: -98%; /* should be -100% but there's a gap in Chrome Version 34.0.1847.131 */
+	background: #7aca7c;
+	color: #358337;
+	content: 'Done!';
+	-webkit-transform-origin: 0% 100%;
+	-webkit-transform: rotateX(90deg);
+	-moz-transform-origin: 0% 100%;
+	-moz-transform: rotateX(90deg);
+	-ms-transform-origin: 0% 100%;
+	-ms-transform: rotateX(90deg);
+	transform-origin: 0% 100%;
+	transform: rotateX(90deg);
+}
+
+.custom-btn:before {
+	top: 100%;
+	background: #e96a6a;
+	color: #a33a3a;
+	content: 'Error!';
+	font-weight: 700;
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	-webkit-transform-origin: 0% 0%;
+	-webkit-transform: rotateX(-90deg);
+	-moz-transform-origin: 0% 0%;
+	-moz-transform: rotateX(-90deg);
+	-ms-transform-origin: 0% 0%;
+	-ms-transform: rotateX(-90deg);
+	transform-origin: 0% 0%;
+	transform: rotateX(-90deg);
+}
+
+.custom-btn.btn-success3d {
+	background: #aaa;
+	-webkit-transform-origin: 0% 100%;
+	-webkit-transform: rotateX(-90deg) translateY(100%);
+	-moz-transform-origin: 50% 100%;
+	-moz-transform: rotateX(-90deg) translateY(100%);
+	-ms-transform-origin: 50% 100%;
+	-ms-transform: rotateX(-90deg) translateY(100%);
+	transform-origin: 50% 100%;
+	transform: rotateX(-90deg) translateY(100%);
+}
+
+.custom-btn.btn-error3d  {
+	background: #aaa;
+	-webkit-transform-origin: 50% 0%;
+	-webkit-transform: rotateX(90deg) translateY(-100%);
+	-moz-transform-origin: 50% 0%;
+	-moz-transform: rotateX(90deg) translateY(-100%);
+	-ms-transform-origin: 50% 0%;
+	-ms-transform: rotateX(90deg) translateY(-100%);
+	transform-origin: 50% 0%;
+	transform: rotateX(90deg) translateY(-100%);
 }
