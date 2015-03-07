@@ -1,5 +1,7 @@
-﻿using Microsoft.ServiceBus.Messaging;
+﻿using Hacklab2015.ConfigurationModels;
+using Microsoft.ServiceBus.Messaging;
 using System;
+using System.Linq;
 using System.Web.Http;
 
 
@@ -9,25 +11,26 @@ namespace Hacklab2015.Api
 	{
 		private static readonly log4net.ILog log = log4net.LogManager.GetLogger (System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-		private static string eventHubName = "apphackhub";
-		private static string connectionString = "Endpoint=sb://apphackhub.servicebus.windows.net/;SharedAccessKeyName=SendRule;SharedAccessKey=d04W2rCsiKQtRHUlZbX9gcdYP6q7ZcIo4YsBtk2q31E=";
-
 		[HttpGet]
 		[HttpPost]
 		public async void RelayMessage()
 		{
+			string eventHubName = AppConfiguration.EventHubConfigs.ConfigItems.FirstOrDefault(x => x.Key == "hubName").Value;
+
+			string connectionString =
+			AppConfiguration.EventHubConfigs.ConfigItems.FirstOrDefault(x => x.Key == "connectionString").Value;
 			var eventHubClient = EventHubClient.CreateFromConnectionString(connectionString, eventHubName);
 
 			var content =  Request.Content.ReadAsStringAsync();
 			await content;
-
+			var testing = AppConfiguration.EventHubConfigs.ConfigItems;
 			try
 			{
 				log.InfoFormat("{0} > Sending message: {1}", DateTime.Now.ToString(), content.Result);
 
 				using (var stream = new System.IO.MemoryStream(System.Text.Encoding.UTF8.GetBytes(content.Result)))
 				{
-					eventHubClient.Send(new EventData(stream));	
+					//eventHubClient.Send(new EventData(stream));	
 				}		
 			}
 			catch (Exception exception)
