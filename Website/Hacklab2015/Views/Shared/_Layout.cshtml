@@ -29,11 +29,18 @@
             submittingClass = 'btn-submitting', 
             successClass = 'btn-success3d', 
             errorClass = 'btn-error3d',
-            _action = $this.data('action');
-        
+            _action = $this.data('action'),
+            _data = {
+                'device_id':_action,
+                'timestamp': Date.now(),
+                 user_id : 666,
+                 type:'ignite',
+                payload: {absolute:100, percent:100, delta:'ignite', level:100}
+            };
         $this.addClass(submittingClass);
 
-        $.post(apiEndPoint, {'action':_action}, function(data, textStatus, xhr) {
+
+        $.post(apiEndPoint, _data, function(data, textStatus, xhr) {
 
         })
         .error(function(){
