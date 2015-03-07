@@ -24,7 +24,7 @@ namespace Hacklab2015
                       "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
-                        "~/Scripts/app.js*"));
+                        "~/Scripts/app.js"));
 
 
 
