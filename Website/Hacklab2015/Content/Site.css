@@ -19,7 +19,7 @@
 .custom-btn {
 	text-align: center;
 	display: block;
-	background: #5cbcf6;
+	background: #0019af;
 	border: none;
 	font-family: inherit;
 	font-size: 30px;
@@ -55,7 +55,7 @@
 }
 @-webkit-keyframes submit-animation {
 	0% {
-		background: #5cbcf6;
+		background: #0019af;
 	}
 	100% { 
 		background: #767A99;
@@ -64,7 +64,7 @@
 
 @-moz-keyframes submit-animation {
 	0% {
-		background: #5cbcf6;
+		background: #0019af;
 	}
 	100% { 
 		background: #767A99;
@@ -73,7 +73,7 @@
 
 @keyframes submit-animation {
 	0% {
-		background: #5cbcf6;
+		background: #0019af;
 	}
 	100% { 
 		background: #767A99;	}
