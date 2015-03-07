@@ -183,6 +183,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="ConfigurationModels\AppConfiguration.cs" />
+    <Compile Include="ConfigurationModels\EventHubConfigurationSection.cs" />
+    <Compile Include="ConfigurationModels\HackLabConfigurationElement.cs" />
+    <Compile Include="ConfigurationModels\HackLabConfigurationElementCollection.cs" />
+    <Compile Include="ConfigurationModels\RelayModelSection.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -205,6 +210,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Configs\EventHub.config" />
     <None Include="Properties\PublishProfiles\hacklab2015.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
