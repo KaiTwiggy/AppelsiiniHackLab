@@ -23,10 +23,11 @@
 	border: none;
 	font-family: inherit;
 	font-size: 30px;
+	line-height:150px;
 	color: inherit;
 	cursor: pointer;
-	padding: 25px 80px;
-	margin: 15px 30px;
+	padding: 0;
+	margin: 15px auto;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: 700;
@@ -39,6 +40,8 @@
 	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
 	transform-style: preserve-3d;
+	width: 150px;
+	height:150px;
 }
 .custom-btn:hover,.custom-btn:active,.custom-btn:focus,.custom-btn:visited{
 	color: white;
@@ -88,14 +91,14 @@
 	height: 100%;
 	position: absolute;
 	left: 0;
-	line-height: 92px;
+	line-height: 150px;
 }
 
 .custom-btn:after {
 	top: -98%; /* should be -100% but there's a gap in Chrome Version 34.0.1847.131 */
-	background: #7aca7c;
-	color: #358337;
-	content: 'Done!';
+	background: #ff6400;
+	color: #fff;
+	content: ':)';
 	-webkit-transform-origin: 0% 100%;
 	-webkit-transform: rotateX(90deg);
 	-moz-transform-origin: 0% 100%;
@@ -108,9 +111,9 @@
 
 .custom-btn:before {
 	top: 100%;
-	background: #e96a6a;
-	color: #a33a3a;
-	content: 'Error!';
+	background: #FF4136;
+	color: #fff;
+	content: ':(';
 	font-weight: 700;
 	font-family: 'Lato', Calibri, Arial, sans-serif;
 	-webkit-transform-origin: 0% 0%;
