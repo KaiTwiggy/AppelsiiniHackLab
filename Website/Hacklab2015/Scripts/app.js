@@ -12,11 +12,11 @@
 			submittingClass = 'btn-submitting',	
 			successClass = 'btn-success3d',	
 			errorClass = 'btn-error3d',
-			_id = $this.data('id');
+			_action = $this.data('action');
 		
 		$this.addClass(submittingClass);
 
-		$.post(apiEndPoint, {'id':_id}, function(data, textStatus, xhr) {
+		$.post(apiEndPoint, {'action':_action}, function(data, textStatus, xhr) {
 
 		})
 		.error(function(){
