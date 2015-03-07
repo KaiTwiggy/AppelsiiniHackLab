@@ -214,3 +214,12 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+Website/Hacklab2015/bin/Hacklab2015.dll
+*.pdb
+Website/Hacklab2015/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+Website/Hacklab2015/bin/Hacklab2015.pdb
+Website/Hacklab2015/obj/Debug/Hacklab2015.csproj.FileListAbsolute.txt
+Website/Hacklab2015/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+Website/Hacklab2015/obj/Debug/Hacklab2015.csproj.FileListAbsolute.txt
+Website/Hacklab2015/obj/Debug/Hacklab2015.dll
+Website/Hacklab2015/obj/Debug/Hacklab2015.pdb
